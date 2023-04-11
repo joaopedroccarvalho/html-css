@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+        caption {
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 5px;
+            background-color: lightgrey;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        Anatomia para as tabelas grandes
+        TABLE
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+                Sempre que for um dado usa-se TD
+                Sempre que for um título usa-se TH
+    -->
+    <table>
+        <Caption>População dos estados mais populosos do país</Caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 70px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">3000000</td>
+            </tr>
+            <tr>
+                <td>Minas gerais</td>
+                <td class="num">1560000</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">4565047</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">4567544</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">3435500</td>
+            </tr>
+            <tr>
+                <td>Espiríto Santo</td>
+                <td>5675533</td>
+            </tr>
+            <tr>
+                <td>Rondonia</td>
+                <td>5664356</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td>5775345</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td>67754467</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td>5675435</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td>566457</td>
+            </tr>
+            <tr>
+                <td>pará</td>
+                <td>677545</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td>5775466</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td>6765567</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td>576446</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td>5775456</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td>677446</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th>
+                <td class="num"><strong>400000</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
